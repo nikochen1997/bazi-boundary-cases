@@ -1,0 +1,126 @@
+{
+  "description": "立春前一分钟与立春当分。断言：同一年份的 before/after，年柱月柱不同，日柱时柱相同。",
+  "convention": "年界=立春（分钟口径）；不做真太阳时校正；东八区钟表时间",
+  "cases": [
+    {
+      "id": "lichun-1998-before",
+      "input": {
+        "date": "1998-02-04",
+        "time": "08:56",
+        "gender": "male"
+      },
+      "expected": {
+        "year": "丁丑",
+        "month": "癸丑",
+        "day": "壬午",
+        "hour": "甲辰"
+      },
+      "note": "立春在 08:57，前一分钟仍属上一年、丑月"
+    },
+    {
+      "id": "lichun-1998-after",
+      "input": {
+        "date": "1998-02-04",
+        "time": "08:57",
+        "gender": "male"
+      },
+      "expected": {
+        "year": "戊寅",
+        "month": "甲寅",
+        "day": "壬午",
+        "hour": "甲辰"
+      },
+      "note": "立春当分，年柱与月柱同时切换；同一性别下大运顺逆与 before 相反"
+    },
+    {
+      "id": "lichun-2000-before",
+      "input": {
+        "date": "2000-02-04",
+        "time": "20:39",
+        "gender": "male"
+      },
+      "expected": {
+        "year": "己卯",
+        "month": "丁丑",
+        "day": "壬辰",
+        "hour": "庚戌"
+      },
+      "note": "立春在 20:40，前一分钟仍属上一年、丑月"
+    },
+    {
+      "id": "lichun-2000-after",
+      "input": {
+        "date": "2000-02-04",
+        "time": "20:40",
+        "gender": "male"
+      },
+      "expected": {
+        "year": "庚辰",
+        "month": "戊寅",
+        "day": "壬辰",
+        "hour": "庚戌"
+      },
+      "note": "立春当分，年柱与月柱同时切换；同一性别下大运顺逆与 before 相反"
+    },
+    {
+      "id": "lichun-2004-before",
+      "input": {
+        "date": "2004-02-04",
+        "time": "19:55",
+        "gender": "male"
+      },
+      "expected": {
+        "year": "癸未",
+        "month": "乙丑",
+        "day": "癸丑",
+        "hour": "壬戌"
+      },
+      "note": "立春在 19:56，前一分钟仍属上一年、丑月"
+    },
+    {
+      "id": "lichun-2004-after",
+      "input": {
+        "date": "2004-02-04",
+        "time": "19:56",
+        "gender": "male"
+      },
+      "expected": {
+        "year": "甲申",
+        "month": "丙寅",
+        "day": "癸丑",
+        "hour": "壬戌"
+      },
+      "note": "立春当分，年柱与月柱同时切换；同一性别下大运顺逆与 before 相反"
+    },
+    {
+      "id": "lichun-2010-before",
+      "input": {
+        "date": "2010-02-04",
+        "time": "06:47",
+        "gender": "male"
+      },
+      "expected": {
+        "year": "己丑",
+        "month": "丁丑",
+        "day": "乙酉",
+        "hour": "己卯"
+      },
+      "note": "立春在 06:48，前一分钟仍属上一年、丑月"
+    },
+    {
+      "id": "lichun-2010-after",
+      "input": {
+        "date": "2010-02-04",
+        "time": "06:48",
+        "gender": "male"
+      },
+      "expected": {
+        "year": "庚寅",
+        "month": "戊寅",
+        "day": "乙酉",
+        "hour": "己卯"
+      },
+      "note": "立春当分，年柱与月柱同时切换；同一性别下大运顺逆与 before 相反"
+    }
+  ]
+}

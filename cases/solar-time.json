@@ -1,0 +1,96 @@
+{
+  "description": "同一出生时刻，只换出生城市。年月日三柱五城相同；时柱按校正后是否跨过 07:00（卯/辰界）分成两组。",
+  "convention": "真太阳时 = 钟表时间 +（经度 − 120）× 4 分钟 + 均时差；城市经度取市中心",
+  "cases": [
+    {
+      "id": "solar-urumqi",
+      "input": {
+        "date": "1990-06-15",
+        "time": "08:00",
+        "gender": "male",
+        "city": "乌鲁木齐",
+        "longitude": 87.61
+      },
+      "correction_minutes": -129.5,
+      "true_solar_time": "05:50:28",
+      "expected": {
+        "year": "庚午",
+        "month": "壬午",
+        "day": "辛亥",
+        "hour": "辛卯"
+      }
+    },
+    {
+      "id": "solar-lhasa",
+      "input": {
+        "date": "1990-06-15",
+        "time": "08:00",
+        "gender": "male",
+        "city": "拉萨",
+        "longitude": 91.12
+      },
+      "correction_minutes": -115.5,
+      "true_solar_time": "06:04:29",
+      "expected": {
+        "year": "庚午",
+        "month": "壬午",
+        "day": "辛亥",
+        "hour": "辛卯"
+      }
+    },
+    {
+      "id": "solar-beijing",
+      "input": {
+        "date": "1990-06-15",
+        "time": "08:00",
+        "gender": "male",
+        "city": "北京",
+        "longitude": 116.39
+      },
+      "correction_minutes": -14.4,
+      "true_solar_time": "07:45:34",
+      "expected": {
+        "year": "庚午",
+        "month": "壬午",
+        "day": "辛亥",
+        "hour": "壬辰"
+      }
+    },
+    {
+      "id": "solar-shanghai",
+      "input": {
+        "date": "1990-06-15",
+        "time": "08:00",
+        "gender": "male",
+        "city": "上海",
+        "longitude": 121.47
+      },
+      "correction_minutes": 5.9,
+      "true_solar_time": "08:05:53",
+      "expected": {
+        "year": "庚午",
+        "month": "壬午",
+        "day": "辛亥",
+        "hour": "壬辰"
+      }
+    },
+    {
+      "id": "solar-harbin",
+      "input": {
+        "date": "1990-06-15",
+        "time": "08:00",
+        "gender": "male",
+        "city": "哈尔滨",
+        "longitude": 126.53
+      },
+      "correction_minutes": 26.1,
+      "true_solar_time": "08:26:07",
+      "expected": {
+        "year": "庚午",
+        "month": "壬午",
+        "day": "辛亥",
+        "hour": "壬辰"
+      }
+    }
+  ]
+}
