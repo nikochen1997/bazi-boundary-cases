@@ -87,6 +87,15 @@ for case in load("cases/lichun.json"):
 - [生在立春当天，八字算哪一年？差一分钟，年柱和月柱整根换掉](docs/lichun-one-minute.md)
 - [真太阳时和北京时间：盘变不变，看的是有没有跨过时辰的界](docs/true-solar-time-five-cities.md)
 - [让 AI 起名不胡编：「八字该补什么」怎么算，每个字的出处怎么查](docs/ai-naming-without-making-things-up.md)
+- [晚上 11 点半出生，八字算今天还是明天？早晚子时的三种做法和 9 条边界用例](docs/zishi-late-night-birth.md)
+
+## 场景文章：择日、合盘、奇门
+
+各拿一次真实输出走一遍，说明哪些是算出来的、哪些是各家约定。
+
+- [搬家为什么要选黄道吉日：拿 2026 年 9 月 18 日这一天走一遍](docs/date-selection-moving-house.md)
+- [结婚之前要不要合八字：合的到底是什么](docs/bazi-compatibility-what-is-compared.md)
+- [奇门遁甲怎么起局：拿一张真实起出来的盘，逐步摆出来](docs/qimen-how-a-chart-is-cast.md)
 
 ## 其他文章：做 AI 陪伴产品的笔记
 
