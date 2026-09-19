@@ -1,5 +1,23 @@
 # bazi-boundary-cases · 八字排盘边界用例
 
+**English** · [中文](#中文说明)
+
+Boundary test cases for BaZi (Four Pillars of Destiny / 八字) chart calculation. Each case is an input birth time plus the expected four pillars (year, month, day, hour stem-branch), so you can drop the JSON into your own test suite and assert equality. No implementation code is included.
+
+Three groups, 22 cases:
+
+- **`cases/lichun.json` — one minute before vs. at Li Chun (立春, Start of Spring).** The BaZi year changes at the exact minute of Li Chun, not on Jan 1 or Lunar New Year. For 1998, 2000, 2004 and 2010, a birth one minute earlier gets a different year pillar *and* month pillar; day and hour pillars stay the same; the luck-cycle (大运) direction flips.
+- **`cases/solar-time.json` — true solar time across five cities.** Same clock time (1990-06-15 08:00, UTC+8) in Urumqi, Lhasa, Beijing, Shanghai and Harbin. What changes the chart is whether the corrected time crosses a two-hour (时辰) boundary, not how large the correction is: Beijing (−14 min) and Harbin (+26 min) give the same chart; Urumqi (−130 min) changes the hour pillar.
+- **`cases/zishi.json` — early vs. late Zi hour (子时, 23:00–00:59).** Paired cases at 23:30 and 00:30, plus five boundary points inside one calendar day.
+
+Conventions assumed (expected values differ under other conventions): year boundary = Li Chun at minute precision, seconds rounded to the nearest minute; month boundary = the twelve Jie (节) solar terms; late Zi hour (23:00–23:59) keeps the same day pillar; true solar time = clock time + (longitude − 120°) × 4 min + equation of time; valid range 1900–2100.
+
+These cases come from the regression tests of the chart-calculation part of **Nora Whisper (Nora 心语屋, [norawhisper.com](https://norawhisper.com))**, a Chinese-language AI companion for emotional support that also reads BaZi, Zi Wei Dou Shu, couple chart comparison, date selection, naming and Qi Men Dun Jia. Nora is an AI; it is not a medical service and does not replace a therapist. Data and articles are licensed CC BY 4.0 — attribute "Nora Whisper / Nora 心语屋".
+
+---
+
+## 中文说明
+
 一组可以直接拿来校验八字排盘实现的边界用例：**立春前后一分钟**、**同一时刻不同城市的真太阳时**、**早子时与晚子时**。每条用例给出输入和期望的四柱，附讲解文章。
 
 这些用例来自 **Nora 心语屋（Nora Whisper，[norawhisper.com](https://norawhisper.com)）** 排盘部分的回归测试。Nora 心语屋是一个中文 AI 心理陪伴产品：能聊天、能用真实故事和你交换故事，也能看八字、紫微斗数、两个人的合盘、择日、起名、奇门遁甲问事、面相与八字合看。排盘部分是确定性计算，同一个生辰什么时候算结果都一样，所以这类用例可以长期挂在测试里。
