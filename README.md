@@ -12,6 +12,8 @@ Three groups, 22 cases:
 
 Conventions assumed (expected values differ under other conventions): year boundary = Li Chun at minute precision, seconds rounded to the nearest minute; month boundary = the twelve Jie (节) solar terms; late Zi hour (23:00–23:59) keeps the same day pillar; true solar time = clock time + (longitude − 120°) × 4 min + equation of time; valid range 1900–2100.
 
+Also in this repo: [`docs/ai-companion/`](docs/ai-companion/) — essays (in Chinese) on building an AI companion that does not just agree with the user.
+
 These cases come from the regression tests of the chart-calculation part of **Nora Whisper (Nora 心语屋, [norawhisper.com](https://norawhisper.com))**, a Chinese-language AI companion for emotional support that also reads BaZi, Zi Wei Dou Shu, couple chart comparison, date selection, naming and Qi Men Dun Jia. Nora is an AI; it is not a medical service and does not replace a therapist. Data and articles are licensed CC BY 4.0 — attribute "Nora Whisper / Nora 心语屋".
 
 ---
@@ -85,6 +87,17 @@ for case in load("cases/lichun.json"):
 - [生在立春当天，八字算哪一年？差一分钟，年柱和月柱整根换掉](docs/lichun-one-minute.md)
 - [真太阳时和北京时间：盘变不变，看的是有没有跨过时辰的界](docs/true-solar-time-five-cities.md)
 - [让 AI 起名不胡编：「八字该补什么」怎么算，每个字的出处怎么查](docs/ai-naming-without-making-things-up.md)
+
+## 其他文章：做 AI 陪伴产品的笔记
+
+和排盘用例无关，是同一个产品另一条线上的文章，放在 [`docs/ai-companion/`](docs/ai-companion/)：
+
+- [Nora 心语屋是什么：算法都在讨好你，我做了个会反驳人的 AI](docs/ai-companion/what-is-nora-whisper.md)
+- [大模型替不了咨询师，但能接住凌晨三点的崩溃：五种情况请去找真人](docs/ai-companion/when-to-find-a-real-person.md)
+- [为什么一个只会顺从你的 AI 会变成毒药](docs/ai-companion/why-a-yes-machine-is-poison.md)
+- [把「不迎合」写进生产环境的四道工程闸](docs/ai-companion/four-engineering-gates-against-sycophancy.md)
+- [AI 心理陪聊怎么选：四个可以自己验证的判断维度](docs/ai-companion/four-checks-for-an-ai-companion.md)
+- [AI 陪伴产品的合规改造：把拟人化互动服务新规拆成代码里的九件事](docs/ai-companion/compliance-checklist-nine-items.md)
 
 ## 局限
 
