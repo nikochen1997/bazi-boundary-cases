@@ -89,6 +89,14 @@ for case in load("cases/lichun.json"):
 - [让 AI 起名不胡编：「八字该补什么」怎么算，每个字的出处怎么查](docs/ai-naming-without-making-things-up.md)
 - [晚上 11 点半出生，八字算今天还是明天？早晚子时的三种做法和 9 条边界用例](docs/zishi-late-night-birth.md)
 
+## AI 算命可不可信：拿这些用例去测大模型
+
+2026 年 9 月用本仓库的边界题实测 DeepSeek、豆包的记录，以及读者自己能做的验法。
+
+- [DeepSeek 真的会「算命」吗：一道一分钟的题，同一条回答里两张八字](docs/can-deepseek-cast-a-bazi-chart.md)
+- [AI 择日能不能信：同一天问豆包和规则引擎，数据一样、结论相反](docs/ai-date-selection-doubao-vs-rule-engine.md)
+- [豆包、DeepSeek 的命理回答可信吗：把排盘和解读拆开验](docs/how-to-check-an-ai-fortune-reading.md)
+
 ## 场景文章：择日、合盘、奇门
 
 各拿一次真实输出走一遍，说明哪些是算出来的、哪些是各家约定。
